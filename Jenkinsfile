@@ -3,7 +3,7 @@ pipeline {
 tools 
     {
         jdk 'jdk-11'
-        maven 'maven-3'
+        maven 'maven-new'
     }
     stages {
         stage('Build') {
