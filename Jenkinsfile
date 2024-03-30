@@ -1,5 +1,8 @@
 pipeline {
     agent any
+options {
+        skipStagesAfterUnstable()
+    }
 tools 
     {
         jdk 'jdk-11'
@@ -21,5 +24,16 @@ tools
                 }
             }
         }
+	 stage('Deliver') { 
+            steps {
+                sh './jenkins/scripts/deliver.sh' 
+            }
+        }
     }
 }
+
+
+ 
+   
+       
+    }
